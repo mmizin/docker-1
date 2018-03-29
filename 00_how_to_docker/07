@@ -1,0 +1,3 @@
+# we can use simply command docker inspect -f '{{ .NetworkSettings.IPAddress}}' overlord 
+# or command below
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' overlord

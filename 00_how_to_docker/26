@@ -1,0 +1,3 @@
+# --replicas flag specifies the desired state of 1 running instance.
+#
+docker service create --name engineering-bay --network overmind --replicas 2 -e OC_USERNAME=nmizin -e OC_PASSWD=123 42school/engineering-bay

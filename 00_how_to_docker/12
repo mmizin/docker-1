@@ -1,0 +1,5 @@
+# --restart always - Always restart the container if it stops.
+#  -v - add volume to container
+#  -e MYSQL_ROOT_PASSWORD=my_password - is the password to be set for the MySQL root user
+#  -e MYSQL_DATABASE=my_name - specify the name of a database to be created on image startup
+docker run -d --name spawning-pool --restart always -v hatchery:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Kerigan -e MYSQL_DATABASE=zerglings mysql

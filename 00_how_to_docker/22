@@ -1,0 +1,7 @@
+# grep -v 'run' - show all string without "run"
+# awk - NF gives you the total number of fields(words) in a string
+# eval #TOKEN - run variable
+#
+TOKEN=$(docker swarm init --advertise-addr $(docker-machine ip Char) \
+| grep -v 'run' | awk '/docker/{for(i=1;i<=NF;i++) printf $i" "}') \
+&& eval $(docker-machine env Aiur) && eval $TOKEN

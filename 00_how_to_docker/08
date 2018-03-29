@@ -1,0 +1,4 @@
+# --rm - flag Automaticly remove the container when it exist (docker run --help)
+# -i - flag interactive mode
+# -t - allocate a pseudo-TTY
+docker run -it --rm alpine

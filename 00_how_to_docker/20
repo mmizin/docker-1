@@ -1,0 +1,4 @@
+# docker swarm init - generates two random tokens, a worker token and a manager token.
+# --advertise-addr - This flag specifies the address that will be advertised to other members of the swarm for API access and overlay networking. 
+#
+docker swarm init --advertise-addr $(docker-machine ip Char)

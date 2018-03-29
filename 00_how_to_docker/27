@@ -1,0 +1,2 @@
+# -t(--timestamps) - Show timestamp
+docker service logs -f engineering-bay

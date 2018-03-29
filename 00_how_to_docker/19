@@ -1,0 +1,11 @@
+# --name - nam f the container
+#  -dt - background task and allocate a pseudo-tty
+#  -p - sets up a port forward
+#  -v - If the first argument begins with a / or ~/ you're creating a bindmount. Remove that, and you're naming the volume.
+#  -c - action that u wanna do int container
+#  -e - control on non-printing character
+#
+docker run --name  Abathur -dt -p 3000:3000 -v ~/Abathur/root:/Users/nmizin python:2-slim && \
+docker exec -ti Abathur bash -c "apt update && apt-get install -y python-pip python-dev build-essential && pip install flask" \
+&& docker exec Abathur bash -c "echo -e 'from flask import Flask\napp = Flask(__name__)\n@app.route(\"/\")\ndef hello():\n\treturn \"<h1>Hello World<h1>\"' >> /root/app.py" \
+&& docker exec -ti Abathur bash -c "export FLASK_APP=/root/app.py && flask run -h 0.0.0.0 -p 3000"

@@ -1,0 +1,3 @@
+# use command docker-machine env Char - set environment variables
+# on  machine. After that run command below
+eval $(docker-machine env Char)

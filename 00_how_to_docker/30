@@ -1,0 +1,5 @@
+# we can use thise command 
+# docker service scale marines=50
+#			or
+#
+docker service update --replicas=50 marines

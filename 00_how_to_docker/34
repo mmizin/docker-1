@@ -1,0 +1,2 @@
+# --force - remove local configuration even if machine cannot be removed, also implies an automatic yes (`-y`)
+docker-machine rm --force Aiur
