@@ -1,4 +1,2 @@
 # use comand docker-machine ip Char and then add ip to :8080 (sometimes need to reload page or use <- or -> button)
 docker run -d --name lair --link spawning-pool:mysql -p 8080:80 wordpress
-
-# repalce lair with mysql
